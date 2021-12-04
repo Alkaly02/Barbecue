@@ -1,0 +1,119 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	font-family: sans-serif;
+}
+.container{
+	width: 100%;
+	display: flex;
+}
+#left, #right{
+	height: 600px;
+}
+#left{
+	width: 50%;
+	display: flex;
+	align-items: stretch;
+	background: url('images/barbecue.jpeg') no-repeat ;
+	background-size: cover;
+	background-position: center;
+	color: white;
+	font-size: 0.9em;
+}
+.left{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	padding: 0 80px;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+.left p{
+	font-weight: bold;
+	text-transform: uppercase;
+	color: orange;
+}
+#right{
+	width: 45%;
+	display: flex;
+	align-items: stretch;
+}
+.right{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+}
+.right h1{
+	margin-bottom: 0;
+	padding: 0;
+}
+.right h1 + p{
+	color: #FF5900;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 0;
+}
+#p{
+	margin: 30px 0px;
+}
+#p, button + p{
+	color: #415E53;
+	font-weight: bold;
+	font-size: 1em;
+}
+#input{
+	width: 85%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+}
+input, .submit{
+	margin: 5px;
+	padding: 15px;
+	border: 2px solid #93A299;
+	border-radius: 8px;
+	text-align: center;
+}
+.submit{
+	background-color: #FF5900;
+	cursor: pointer;
+	color: white;
+	text-transform: uppercase;
+	border: none;
+	font-weight: bold;
+	font-size: 0.7em;
+}
+
+@media(max-width: 962px){
+	.container{
+		flex-direction: column;
+	}
+	#left, #right{
+		width: 100%;
+	}
+	.left{
+		width: 100%;
+		padding: 0 20px;
+	}
+	.right{
+		width: 60%;
+	}
+}
+
+@media (min-width: 420px) and (max-width: 720px){
+	.right{
+		width: 80%;
+	}
+	#input{
+		width: 100%;
+	}
+}
+
+@media(max-width: 419px){
+	.right{
+		width: 95%;
+	}
+	#input{
+		width: 100%;
+	}
+}
